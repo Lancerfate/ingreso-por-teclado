@@ -1,0 +1,65 @@
+package ar.edu.unlam;
+
+import java.util.Scanner;
+
+public class Persona {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+		
+	String nombre = "";
+	String apellido = "";
+	int edad;
+	
+	System.out.println("Ingrese Nombre ");
+		nombre = teclado.next();
+	
+	System.out.println("Ingrese apellido ");
+		apellido = teclado.next();
+	
+	System.out.println("Ingrese edad");
+		edad = teclado.nextInt();
+	
+	//Ingresar por teclado y voy a crear una persona
+	
+	Personaa miPersona = new Personaa(nombre ,apellido , edad);
+		
+	//Personaa miPersona2 = new Personaa(nombre,apellido);
+	
+	System.out.println("Ingrese 1 para ver el nombre ");
+	
+	
+	
+	System.out.println("Ingrese 2 para ver el apellido");
+	
+	
+	
+	System.out.println("Ingrese 3 para ver la edad");
+	
+	
+	
+	System.out.println("Ingrese otro para finalizar");
+	
+	int opcion = teclado.nextInt();
+	
+	switch(opcion)
+	{
+		case 1:
+			System.out.println("El nombre es: " + miPersona.getNombre());
+			break;
+		case 2:
+			System.out.println("El apellido es: " + miPersona.getApellido());
+			break;
+		case 3:
+			System.out.println("La edad es: " + miPersona.getEdad());
+			break;
+		
+			
+	}
+	
+	
+	}
+
+}
